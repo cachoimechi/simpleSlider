@@ -1,5 +1,8 @@
-function slider(slidesVisible, selector) {
+function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 	"use strict";
+	//default values for arrows
+	arrowLeft = arrowLeft || "#sliderArrowLeft";
+	arrowRight = arrowRight || "#sliderArrowRight";
 		//initialize position to first slide
 	var current = 0,
 		//initialize number to first slide
