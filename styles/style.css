@@ -24,16 +24,17 @@ h3 {
 }
 
 #container {
+	
+}
+
+header {
+	display: none;
 	width: 960px;
 	margin: 20px auto;
 	padding: 10px;
 	background: #EEE;
 	border: 1px solid white;
 	border-radius: 10px;
-}
-
-header {
-	margin-left: 170px;
 }
 
 #slide1 {
