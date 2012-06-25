@@ -7,12 +7,22 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 	var current = 0,
 		//initialize number to first slide
 		currentSlide = 1,
+		//number of slides,
+		numSlides = $(selector + " li").length,
 		//calculate total number of slides not visible
-		extraSlides = $(selector + " li").length - (slidesVisible - 1),
+		extraSlides = numSlides - (slidesVisible - 1),
 		//calculate true width of li item (margin, padding, borders)
-		outerWidth = $(selector + " li:eq(0)").outerWidth(true);
+		outerWidth = $(selector + " li:eq(0)").outerWidth(true),
+		//Dynamically created circle list items
+		circleHTML = "";
+	//Insert circle indicators
+	for (var x = 0; x < numSlides; x++) {
+		circleHTML += "<li class=\"circle\"></li>";
+	}
+	var insertedCircles = $(selector).parent().append("<ul class=\"sliderCircles\">" + circleHTML + "</ul>");
+	$("li:eq(0)", insertedCircles).addClass("activeCircle");
 	//Left Arrow Click
-	$("#sliderArrowLeft").click(function (event) {
+	$(arrowLeft).click(function (event) {
 		event.preventDefault();
 		//if slider has reached the end
 		if (currentSlide === 1) {
@@ -31,7 +41,7 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 		}
 	});
 	//Right Arrow Click
-	$("#sliderArrowRight").click(function (event) {
+	$(arrowRight).click(function (event) {
 		event.preventDefault();
 		//advance currentSlide
 		currentSlide++;

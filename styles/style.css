@@ -1,15 +1,18 @@
 html, body {
-	background: #AAA;
+	background: #555;
+	font-family: sans-serif;
 }
 
 h1 {
+	color: rgb(0, 0, 150);
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
 
 h2 {
-	font-size: 22px;
+	color: #333;
+	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
@@ -26,4 +29,17 @@ h3 {
 	padding: 10px;
 	background: #EEE;
 	border: 1px solid white;
+	border-radius: 10px;
+}
+
+header {
+	margin-left: 170px;
+}
+
+#slide1 {
+	background: url(../img/slide1_img.jpg) no-repeat;
+}
+
+#slide2 {
+	background: url(../img/slide2_img.jpg) no-repeat;
 }
