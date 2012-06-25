@@ -20,7 +20,7 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 		circleHTML += "<li class=\"circle\"></li>";
 	}
 	var insertedCircles = $(selector).parent().append("<ul class=\"sliderCircles\">" + circleHTML + "</ul>");
-	$("li:eq(0)", insertedCircles).addClass("activeCircle");
+	$(".sliderCircles li:eq(0)", insertedCircles).addClass("activeCircle");
 	//Left Arrow Click
 	$(arrowLeft).click(function (event) {
 		event.preventDefault();
@@ -32,12 +32,18 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 			$(selector).animate({
 				left: "-" + (outerWidth * (extraSlides - 1))
 			}, "slow");
+			//change .activeCircle to last circle
+			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
+			$(".sliderCircles li:last-child", insertedCircles).addClass("activeCircle");
 		} else {
 			currentSlide--;
 			//animate normally
 			$(selector).animate({
 				left: "+=" + outerWidth
 			}, "slow");
+			//change .activeCircle to previous circle
+			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
+			$(".sliderCircles li:nth-child(" + currentSlide + ")", insertedCircles).addClass("activeCircle");
 		}
 	});
 	//Right Arrow Click
@@ -53,11 +59,29 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 			$(selector).animate({
 				left: "0px"
 			}, "slow");
+			//change .activeCircle to first circle
+			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
+			$(".sliderCircles li:eq(0)", insertedCircles).addClass("activeCircle");
 		} else {
 			//animate normally
 			$(selector).animate({
 				left: "-=" + outerWidth
 			}, "slow");
+			//change .activeCircle to next circle
+			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
+			$(".sliderCircles li:nth-child(" + currentSlide + ")", insertedCircles).addClass("activeCircle");
 		}
+	});
+	//Circle Click
+	$(".circle").click(function () {
+		var clickedCircle = $(this).index(),
+			movePx = "-" + clickedCircle * outerWidth + "px";
+		currentSlide = clickedCircle + 1;
+		$(selector).animate({
+			left: movePx
+		}, "slow");
+		//change.activeCircle to circle clicked
+		$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
+		$(this).addClass("activeCircle");
 	});
 }
