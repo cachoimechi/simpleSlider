@@ -1,24 +1,26 @@
-function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
+function slider(slidesVisible, sliderSelector, rotateSpeed, arrowLeft, arrowRight) {
 	"use strict";
 	//default values
+	slidesVisible = slidesVisible || 1;
+	sliderSelector = sliderSelector || "#simpleSlider";
 	rotateSpeed = rotateSpeed || 7000;
 	arrowLeft = arrowLeft || "#sliderArrowLeft";
 	arrowRight = arrowRight || "#sliderArrowRight";
 	//initialize number to first slide
 	var	currentSlide = 1,
 		//number of slides,
-		numSlides = $(selector + " li").length,
+		numSlides = $(sliderSelector + " li").length,
 		//calculate total number of slides not visible
 		extraSlides = numSlides - (slidesVisible - 1),
 		//calculate true width of li item (margin, padding, borders)
-		outerWidth = $(selector + " li:eq(0)").outerWidth(true),
+		outerWidth = $(sliderSelector + " li:eq(0)").outerWidth(true),
 		//Dynamically created circle list items
 		circleHTML = "";
 	//Insert circle indicators
 	for (var x = 0; x < numSlides; x++) {
 		circleHTML += "<li class=\"circle\"></li>";
 	}
-	var insertedCircles = $(selector).parent().append("<ul class=\"sliderCircles\">" + circleHTML + "</ul>");
+	var insertedCircles = $(sliderSelector).parent().append("<ul class=\"sliderCircles\">" + circleHTML + "</ul>");
 	$(".sliderCircles li:eq(0)", insertedCircles).addClass("activeCircle");
 	//Auto Rotation
 	function rotateSlider() {
@@ -33,7 +35,7 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 			//advance currentSlide
 			currentSlide = extraSlides;
 			//animate to last slide
-			$(selector).animate({
+			$(sliderSelector).animate({
 				left: "-" + (outerWidth * (extraSlides - 1))
 			}, "slow");
 			//change .activeCircle to last circle
@@ -42,7 +44,7 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 		} else {
 			currentSlide--;
 			//animate normally
-			$(selector).animate({
+			$(sliderSelector).animate({
 				left: "+=" + outerWidth
 			}, "slow");
 			//change .activeCircle to previous circle
@@ -62,7 +64,7 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 			//set to first slide
 			currentSlide = 1;
 			//animate to first slide
-			$(selector).animate({
+			$(sliderSelector).animate({
 				left: "0px"
 			}, "slow");
 			//change .activeCircle to first circle
@@ -70,7 +72,7 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 			$(".sliderCircles li:eq(0)", insertedCircles).addClass("activeCircle");
 		} else {
 			//animate normally
-			$(selector).animate({
+			$(sliderSelector).animate({
 				left: "-=" + outerWidth
 			}, "slow");
 			//change .activeCircle to next circle
@@ -85,7 +87,7 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 		var clickedCircle = $(this).index(),
 			movePx = "-" + clickedCircle * outerWidth + "px";
 		currentSlide = clickedCircle + 1;
-		$(selector).animate({
+		$(sliderSelector).animate({
 			left: movePx
 		}, "slow");
 		//change.activeCircle to circle clicked
