@@ -7,30 +7,30 @@
 	<link rel="stylesheet" href="styles/style.min.css">
 	<link rel="stylesheet" href="styles/simpleSlider.min.css">
 	<style type="text/css">
-		#sliderWrap {
-			width: 600px;
-			height: 300px;
-			margin-bottom: 50px;
-		}
+#sliderWrap {
+	width: 600px;
+	height: 300px;
+	margin-bottom: 50px;
+}
 
-		.slide {
-			width: 600px;
-			height: 300px;
-			padding: 15px;
-			background: #DDD;
-		}
+.slide {
+	width: 600px;
+	height: 300px;
+	padding: 15px;
+	background: #DDD;
+}
 
-		#slide1 {
-			background: url(img/slide1_img.jpg) no-repeat;
-		}
+#slide1 {
+	background: url(img/slide1_img.jpg) no-repeat;
+}
 
-		#slide2 {
-			background: url(img/slide2_img.jpg) no-repeat;
-		}
+#slide2 {
+	background: url(img/slide2_img.jpg) no-repeat;
+}
 
-		#slide3 {
-			background: url(img/slide3_img.jpg) no-repeat;
-		}
+#slide3 {
+	background: url(img/slide3_img.jpg) no-repeat;
+}
 	</style>
 </head>
 <body>
@@ -72,10 +72,12 @@
 		<!-- End simpleSlider -->
 		<div id="customBuilder">
 			<h1>Build Your Own</h1>
+			<textarea name="styles" id="customStyles" cols="50" rows="30"></textarea>
 		</div>
 	</div>
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/simpleSlider.min.js"></script>
+<script type="text/javascript" src="js/customBuilder.min.js"></script>
 <script type="text/javascript">
 	slider(1, "#simpleSlider");
 </script>
