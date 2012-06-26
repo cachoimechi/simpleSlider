@@ -4,10 +4,8 @@ function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 	rotateSpeed = rotateSpeed || 7000;
 	arrowLeft = arrowLeft || "#sliderArrowLeft";
 	arrowRight = arrowRight || "#sliderArrowRight";
-		//initialize position to first slide
-	var current = 0,
-		//initialize number to first slide
-		currentSlide = 1,
+	//initialize number to first slide
+	var	currentSlide = 1,
 		//number of slides,
 		numSlides = $(selector + " li").length,
 		//calculate total number of slides not visible
