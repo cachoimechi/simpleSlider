@@ -1,6 +1,7 @@
-function slider(slidesVisible, selector, arrowLeft, arrowRight) {
+function slider(slidesVisible, selector, rotateSpeed, arrowLeft, arrowRight) {
 	"use strict";
-	//default values for arrows
+	//default values
+	rotateSpeed = rotateSpeed || 7000;
 	arrowLeft = arrowLeft || "#sliderArrowLeft";
 	arrowRight = arrowRight || "#sliderArrowRight";
 		//initialize position to first slide
@@ -21,6 +22,11 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 	}
 	var insertedCircles = $(selector).parent().append("<ul class=\"sliderCircles\">" + circleHTML + "</ul>");
 	$(".sliderCircles li:eq(0)", insertedCircles).addClass("activeCircle");
+	//Auto Rotation
+	function rotateSlider() {
+		$(arrowRight).click();
+	}
+	var rotate = setInterval(rotateSlider, rotateSpeed);
 	//Left Arrow Click
 	$(arrowLeft).click(function (event) {
 		event.preventDefault();
@@ -45,6 +51,8 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
 			$(".sliderCircles li:nth-child(" + currentSlide + ")", insertedCircles).addClass("activeCircle");
 		}
+		clearInterval(rotate);
+		rotate = setInterval(rotateSlider, rotateSpeed);
 	});
 	//Right Arrow Click
 	$(arrowRight).click(function (event) {
@@ -71,6 +79,8 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 			$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
 			$(".sliderCircles li:nth-child(" + currentSlide + ")", insertedCircles).addClass("activeCircle");
 		}
+		clearInterval(rotate);
+		rotate = setInterval(rotateSlider, rotateSpeed);
 	});
 	//Circle Click
 	$(".circle").click(function () {
@@ -83,6 +93,8 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 		//change.activeCircle to circle clicked
 		$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
 		$(this).addClass("activeCircle");
+		clearInterval(rotate);
+		rotate = setInterval(rotateSlider, rotateSpeed);
 	});
 	//Sliding Span Hover
 	$(".slideSpan + .imageCaption").slideToggle();
