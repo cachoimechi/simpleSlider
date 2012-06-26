@@ -107,18 +107,6 @@ header {
 	box-sizing: border-box;
 }
 
-#slide1 {
-	background: url(../img/slide1_img.jpg) no-repeat;
-}
-
-#slide2 {
-	background: url(../img/slide2_img.jpg) no-repeat;
-}
-
-#slide3 {
-	background: url(../img/slide3_img.jpg) no-repeat;
-}
-
 #customBuilder {
 	width: 100%;
 	margin: 20px auto;
