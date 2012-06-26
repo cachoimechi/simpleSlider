@@ -29,7 +29,7 @@
 	box-shadow: inset 0 0 10px 0 #000;
 }
 
-.image-caption {
+.imageCaption {
 	position: absolute;
 	left: 0px;
 	width: 91%;
@@ -37,6 +37,29 @@
 	line-height: 1.5;
 	background: rgba(0, 0, 0, .6);
 	color: white;
+}
+
+.slideSpan {
+	position: absolute;
+	top: 16px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	margin: -8px 5px 0 0;
+	background: rgba(0, 0, 0, .6);
+	border-radius: 10px;
+	z-index: 9999;
+	font-family: serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.slideSpan:hover {
+	background: rgb(255, 255, 255);
+	color: black;
 }
 
 .top {
@@ -62,7 +85,7 @@
 
 .sliderArrow:hover {
 	color: white;
-	background: black;
+	background: #555;
 }
 
 #sliderArrowLeft {
@@ -94,6 +117,6 @@
 	cursor: pointer;
 }
 
-.activeCircle {
+.circle:hover, .activeCircle {
 	background: white;
 }

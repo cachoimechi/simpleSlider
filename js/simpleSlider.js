@@ -84,4 +84,11 @@ function slider(slidesVisible, selector, arrowLeft, arrowRight) {
 		$(".sliderCircles li", insertedCircles).removeClass("activeCircle");
 		$(this).addClass("activeCircle");
 	});
+	//Sliding Span Hover
+	$(".slideSpan + .imageCaption").slideToggle();
+	$(".slideSpan").hover(function () {
+		$(".slideSpan + .imageCaption").slideToggle("fast");
+	}, function () {
+		$(".slideSpan +.imageCaption").slideToggle("fast");
+	});
 }
