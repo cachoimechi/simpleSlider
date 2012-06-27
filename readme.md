@@ -1,12 +1,15 @@
-# Simple Slider #
-## A robust, simple to use jQuery slider ##
+# Simple Slider
+## A robust, simple to use jQuery slider
 
 ### Overview
 
-This project is designed to provide a simple, yet robust slider that is easy to setup and use. To include Simple Slider into your project, you can:
-*use the included template to start your project from scratch
-*paste the relevant sections from either the template index.html or this README
-*or use the custom builder to generate a specific configuration as either a zipped template, or snippets of code you can paste into your page.
+This project is designed to provide a simple, yet robust slider that is easy to setup and use. To include Simple Slider into your project, you have three options:
+
+1. use the included template to start your project from scratch
+
+2. paste the relevant sections from either the template index.html or this README
+
+3. or use the custom builder to generate a specific configuration as either a zipped template, or snippets of code you can paste into your page.
 
 ### Coming Soon: Custom Builder
 This section will contain the documentation for the web app designed for those who don't like getting their hands messy with code (or are too lazy to do it themselves). In the meantime you can use the following usage notes to get up and running the old fashioned way.
