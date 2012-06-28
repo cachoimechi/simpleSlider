@@ -1,6 +1,9 @@
 # Simple Slider
 ## A robust, simple to use jQuery slider
 
+### DISCLAIMER
+I know what you're thinking. _Another_ jQuery slider? Well, this project is certainly not aimed to be innovative, or even particularly useful to anyone other than myself. Its main purpose is as a learning experience, outside of the typical ToDo build (I simply find building a slider for myself more useful/interesting). If you happen to find it useful, fantastic. If you want to help me make it better and teach me to be a better developer, even better!
+
 ### Overview
 
 This project is designed to provide a simple, yet robust slider that is easy to setup and use. To include Simple Slider into your project, you have three options:
