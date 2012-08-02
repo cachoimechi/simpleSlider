@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Simple Slider Demo</title>
-	<link rel="stylesheet" href="styles/reset.min.css">
-	<link rel="stylesheet" href="styles/style.min.css">
-	<link rel="stylesheet" href="styles/simpleSlider.min.css">
-	<style type="text/css">
+    <meta charset="utf-8">
+    <title>Simple Slider Demo</title>
+    <link rel="stylesheet" href="styles/reset.min.css">
+    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/simpleSlider.min.css">
+    <style type="text/css">
+#sliderContainer {
+    width: 800px;
+}
+
+#sliderLeftArrow {
+    left: 40px;
+}
+
+#sliderRightArrow {
+    left: 678px;
+}
+
 #sliderWrap {
-	width: 600px;
-	height: 300px;
-	margin-bottom: 50px;
+    width: 600px;
+    height: 300px;
+    margin-bottom: 50px;
 }
 
 .slide {
-	width: 600px;
-	height: 300px;
-	padding: 15px;
-	background: #DDD;
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    background: #DDD;
 }
 
 #slide1 {
-	background: url(img/slide1_img.jpg) no-repeat;
+    background: url(img/slide1_img.jpg) no-repeat;
 }
 
 #slide2 {
-	background: url(img/slide2_img.jpg) no-repeat;
+    background: url(img/slide2_img.jpg) no-repeat;
 }
 
 #slide3 {
-	background: url(img/slide3_img.jpg) no-repeat;
+    background: url(img/slide3_img.jpg) no-repeat;
 }
-	</style>
+    </style>
 </head>
 <body>
-	<div id="container">
-		<header>
-			<h1>Simple Slider</h1>
-			<h2>A robust, simple to use jQuery slider</h2>
-			<div id="banner"><a href="http://github.com/cachoimechi/simpleSlider">Fork me on GitHub</a></div>
-		</header>
-		<!--Begin simpleSlider-->
-		<a id="sliderArrowLeft" class="sliderArrow" href="#">&lt;</a>
-		<a id="sliderArrowRight" class="sliderArrow" href="#">&gt;</a>
-		<div id="sliderWrap">
-			<ul id="simpleSlider">
-				<li id="slide1" class="slide">
-					<span class="imageCaption top">Simple Slider handles full images, including image captions.</span>
-				</li>
-				<li id="slide2" class="slide">
-					<span class="imageCaption bottom">Captions can be aligned top or bottom.</span>
-				</li>
-				<li id="slide3" class="slide">
-					<div class="slideSpan">i</div>
-					<span class="imageCaption top">Captions can also start out hidden, aligned top or bottom as well.</span>
-				</li>
-				<li id="slide4" class="slide">
-					<h3>Slide 4</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</li>
-				<li id="slide5" class="slide">
-					<h3>Slide 5</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur.</p>
-				</li>
-			</ul>
-		</div>
-		<!-- End simpleSlider -->
-		<div id="customBuilder">
-			<h1>Build Your Own</h1>
-			<textarea name="styles" id="customStyles" cols="50" rows="30"></textarea>
-		</div>
-	</div>
+    <div id="container">
+        <header>
+            <h1>Simple Slider</h1>
+            <h2>A robust, simple to use jQuery slider</h2>
+            <div id="banner"><a href="http://github.com/cachoimechi/simpleSlider">Fork me on GitHub</a></div>
+        </header>
+        <!--Begin simpleSlider-->
+        <div id="sliderContainer">
+            <a id="sliderLeftArrow" class="sliderArrow" href="#">&lt;</a>
+            <a id="sliderRightArrow" class="sliderArrow" href="#">&gt;</a>
+            <div id="sliderWrap">
+                <ul id="simpleSlider">
+                    <li id="slide1" class="slide">
+                        <span class="imageCaption top">Simple Slider handles full images, including image captions.</span>
+                    </li>
+                    <li id="slide2" class="slide">
+                        <span class="imageCaption bottom">Captions can be aligned top or bottom.</span>
+                    </li>
+                    <li id="slide3" class="slide">
+                        <div class="slideSpan">i</div>
+                        <span class="imageCaption top">Captions can also start out hidden, aligned top or bottom as well.</span>
+                    </li>
+                    <li id="slide4" class="slide">
+                        <h3>Slide 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                    <li id="slide5" class="slide">
+                        <h3>Slide 5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End simpleSlider -->
+        <!-- <div id="customBuilder">
+            <h1>Build Your Own</h1>
+            <textarea name="styles" id="customStyles" cols="50" rows="30"></textarea>
+        </div> -->
+    </div>
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/simpleSlider.min.js"></script>
 <script type="text/javascript" src="js/customBuilder.min.js"></script>
 <script type="text/javascript">
-	slider();
+    slider.start();
 </script>
 </body>
 </html>

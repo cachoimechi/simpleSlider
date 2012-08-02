@@ -1,118 +1,120 @@
+#sliderContainer {
+    margin: auto;
+}
+
 #sliderWrap {
-	position: relative;
-	margin: auto;
-	border: 10px solid white;
-	background: white;
-	overflow: hidden;
-	box-shadow: 0 3px 10px 0 #333;
+    position: relative;
+    margin: auto;
+    border: 10px solid white;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 3px 10px 0 #333;
 }
 
 #simpleSlider {
-	position: relative;
-	width: 99999px;
-	height: 100%;
-	padding: 0;
-	border-radius: 10px;
-	overflow: hidden;
+    position: relative;
+    width: 99999px;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .slide {
-	float: left;
-	list-style: none;
-	position: relative;
-	box-shadow: inset 0 0 10px 0 #000;
-	box-sizing: border-box;
+    float: left;
+    list-style: none;
+    position: relative;
+    box-shadow: inset 0 0 10px 0 #000;
+    box-sizing: border-box;
 }
 
 .imageCaption {
-	position: absolute;
-	left: 0px;
-	width: 100%;
-	padding: 1% 5%;
-	line-height: 1.5;
-	background: rgba(0, 0, 0, .6);
-	color: white;
-	box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    padding: 1% 5%;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    box-sizing: border-box;
 }
 
 .slideSpan {
-	position: absolute;
-	top: 16px;
-	right: 5px;
-	width: 20px;
-	height: 20px;
-	margin: -8px 5px 0 0;
-	background: rgba(0, 0, 0, .6);
-	border-radius: 10px;
-	z-index: 9999;
-	font-family: serif;
-	font-style: italic;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-	cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    margin: -8px 5px 0 0;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    z-index: 9999;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    cursor: pointer;
 }
 
 .slideSpan:hover {
-	background: rgb(255, 255, 255);
-	color: black;
+    background: rgb(255, 255, 255);
+    color: black;
 }
 
 .top {
-	top: 0;
+    top: 0;
 }
 
 .bottom {
-	bottom: 0;
+    bottom: 0;
 }
 
 .sliderArrow {
-	text-decoration: none;
-	color: black;
-	font-size: 50px;
-	font-weight: bold;
-	position: relative;
-	top: 185px;
-	background: white;
-	padding: 0 5px;
-	margin-top: -3px;
-	box-shadow: 0 2px 10px 0 #333;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    top: 185px;
+    background: white;
+    padding: 0 5px;
+    margin-top: -3px;
+    box-shadow: 0 2px 10px 0 #333;
 }
 
 .sliderArrow:hover {
-	color: white;
-	background: #555;
+    color: white;
+    background: #555;
 }
 
-#sliderArrowLeft {
-	left: 150px;
-	border-radius: 50% 0 0 50%;
+#sliderLeftArrow {
+    border-radius: 50% 0 0 50%;
 }
 
-#sliderArrowRight {
-	left: 793px;
-	border-radius: 0 50% 50% 0;
+#sliderRightArrow {
+    border-radius: 0 50% 50% 0;
 }
 
 .sliderCircles {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: rgba(0, 0, 0, .6);
-	border-radius: 10px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 10px 0 0 0;
 }
 
 .circle {
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	background: #AAA;
-	display: block;
-	float: left;
-	margin: 5px;
-	cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #AAA;
+    display: block;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .circle:hover, .activeCircle {
-	background: white;
+    background: white;
 }
