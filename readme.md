@@ -21,6 +21,8 @@ _**Note:** knowledge of working with html, css, and javascript required_
 
 ### Usage
 
+##Out of Date! Rewritten steps reflecting the new structure forthcoming...
+
 If you'd rather set the slider up yourself (aren't you fancy), here is all you need to know to get started.
 
 By default, we have included a separate simpleSlider.css file to contain all styles associated with the slider. Add the following link to the head of all pages displaying the slider.
@@ -56,7 +58,7 @@ All together there are five parameters that can be passed (in order):
 All of these parameters are optional, so if you don't need to change any defaults, you only need to include the following:
 ```html
 <script type="text/javascript">
-	slider();
+    slider();
 </script>
 ```
 
@@ -64,17 +66,17 @@ If you need to change any defaults, however, you must pass all parameters up to 
 ```html
 <!-- Only the first default changed -->
 <script type="text/javascript">
-	slider(2);
+    slider(2);
 </script>
 
 <!-- First three changed -->
 <script type="text/javascript">
-	slider(3, "#mySlider", 5000);
+    slider(3, "#mySlider", 5000);
 </script>
 
 <!-- All changed -->
 <script type="text/javascript">
-	slider(2, "#mainSlider", 6000, "#mainLeftArrow", "#mainRightArrow");
+    slider(2, "#mainSlider", 6000, "#mainLeftArrow", "#mainRightArrow");
 </script>
 ```
 
